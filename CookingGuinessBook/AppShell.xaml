@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CookingGuinessBook.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CookingGuinessBook"
+    Shell.FlyoutBehavior="Disabled"
+    Title="CookingGuinessBook"
+    BackgroundColor="DarkGoldenrod">
+
+    <TabBar>
+        <Tab Title="Receipts">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:MainPage}"
+                Route="MainPage"/>
+        </Tab>
+        <Tab Title="Add new receipts">
+            <ShellContent
+                ContentTemplate="{DataTemplate local:AddingReceiptsPage}"
+                Route="AddingReceiptsPage"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,1 @@
+D:\GitProjects\CookingGuinessBook\CookingGuinessBook\CookingGuinessBook.csproj;x64

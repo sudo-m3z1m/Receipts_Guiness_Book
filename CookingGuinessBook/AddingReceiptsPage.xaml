@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingGuinessBook.AddingReceiptsPage"
+             Title="Add new receipt">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Entry Placeholder="Receipt's name" FontSize="16"
+               x:Name="name"/>
+            <Editor Placeholder="Add Description to Receipt"
+                    FontSize="16"
+                    x:Name="description"
+                    Margin="0, 30, 0, 30"/>
+            <Editor Placeholder="Receipt"
+                    FontSize="16"
+                    x:Name="receipt"/>
+            <Picker x:Name="type_picker"
+                    Title="Choose a receipt type"
+                    HorizontalOptions="Center"
+                    Margin="0, 5, 0, 0"
+                    HorizontalTextAlignment="Center"/>
+            <Button Text="Pick photo"
+                FontSize="Header"
+                CornerRadius="10"
+                BackgroundColor="BurlyWood"
+                BorderColor="Black"
+                Margin="50, 25, 50, 10"
+                Clicked="Button_Clicked"/>
+            <Button Text="Preview"
+                FontSize="Header"
+                CornerRadius="10"
+                BackgroundColor="BurlyWood"
+                BorderColor="Black"
+                Margin="50, 10, 50, 25"
+                Clicked="Button_Clicked_1"/>
+            <Frame BackgroundColor="White"
+                   BorderColor="Black"
+                   Margin="15, 10, 15, 10"
+                   CornerRadius="15">
+                <VerticalStackLayout x:Name="preview_stack">
+                    <Label x:Name="receipt_name"
+                           FontSize="32"
+                           HorizontalOptions="Center"
+                           TextColor="Black"
+                           Margin="15, 10, 15, 10"/>
+                    <Image x:Name="receipt_image"
+                           HorizontalOptions="Center"
+                           Margin="15, 10, 15, 10"/>
+                    <Label x:Name="receipt_description"
+                           FontSize="16"
+                           HorizontalOptions="Center"
+                           TextColor="Black"
+                           Margin="15, 10, 15, 10"/>
+                    <Label x:Name="receipt_text"
+                           HorizontalOptions="Center"
+                           TextColor="Black"
+                           Margin="15, 10, 15, 10"/>
+                </VerticalStackLayout>
+            </Frame>
+            <Button Text="Confirm"
+                    Margin="50, 15, 50, 70"
+                    BackgroundColor="BurlyWood"
+                    BorderColor="White"
+                    CornerRadius="15"
+                    HorizontalOptions="Center"
+                    FontSize="16"
+                    Clicked="Button_Clicked_2"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

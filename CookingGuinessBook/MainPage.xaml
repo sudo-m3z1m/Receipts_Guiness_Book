@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingGuinessBook.MainPage"
+             Title="Receipts"
+             BackgroundColor="Goldenrod">
+    <CollectionView x:Name="collection_view"
+                    SelectionMode="Single"
+                    SelectionChanged="collection_view_SelectionChanged">
+        <CollectionView.Header>
+            <HorizontalStackLayout HorizontalOptions="End">
+                <Button Text="Clear receipts"
+                        BackgroundColor="DarkGoldenrod"
+                        CornerRadius="10"
+                        Margin="5, 10, 5, 0"
+                        Clicked="Button_Clicked_1"/>
+                <Button Text="Filtering"
+                        BackgroundColor="DarkGoldenrod"
+                        CornerRadius="10"
+                        Margin="5, 10, 5, 0"
+                        Clicked="Button_Clicked_2"/>
+                <Button Text="Update page"
+                    BackgroundColor="DarkGoldenrod"
+                    CornerRadius="10"
+                    Margin="5, 10, 15, 0"
+                    Clicked="Button_Clicked"/>
+            </HorizontalStackLayout>
+        </CollectionView.Header>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <VerticalStackLayout>
+                    <Frame BackgroundColor="White"
+                           BorderColor="Black"
+                           Margin="15, 10, 15, 10"
+                           InputTransparent="True">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding name}"
+                                   HorizontalOptions="Center"
+                                   FontSize="32"
+                                   TextColor="Black"/>
+                            <Image Source="{Binding image_path}"/>
+                            <Label Text="{Binding description}"
+                                   HorizontalOptions="Center"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   MaximumWidthRequest="300"
+                                   LineBreakMode="TailTruncation"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+</ContentPage>

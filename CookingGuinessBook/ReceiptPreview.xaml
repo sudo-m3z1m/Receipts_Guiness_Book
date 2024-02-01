@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CookingGuinessBook.ReceiptPreview"
+             Margin="15, 15, 15, 15"
+             BackgroundColor="White"
+             BorderColor="Black"
+             CornerRadius="15">
+    <Frame.GestureRecognizers>
+        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+    </Frame.GestureRecognizers>
+    <VerticalStackLayout>
+        <Label x:Name="name"
+               FontSize="32"
+               TextColor="Black"
+               HorizontalOptions="Center"/>
+        <Image x:Name="image"
+               HorizontalOptions="Center"/>
+        <Label x:Name="description"
+               FontSize="16"
+               TextColor="Black"
+               HorizontalOptions="Center"
+               MaximumWidthRequest="300"
+               LineBreakMode="TailTruncation"/>
+    </VerticalStackLayout>
+</Frame>
